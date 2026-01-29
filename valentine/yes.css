@@ -1,0 +1,74 @@
+
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #388fecff, #b8b3ffff);
+    color: #1b004dff;
+    text-align: center;
+    overflow-x: hidden; /* prevent horizontal scroll if animations move */
+}
+
+
+h1 {
+    font-size: 4em;
+    margin-top: 50px;
+    color: #4400ffff;
+    text-shadow: 2px 2px 10px #99a3ffff;
+    animation: heartbeat 1s infinite;
+}
+
+/* Heartbeat animation for H1 */
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(1.1); }
+    50% { transform: scale(1.2); }
+    75% { transform: scale(1.1); }
+}
+
+
+p {
+    font-size: 2em;
+    color: #1f0066ff;
+    animation: pop 1s ease-out forwards;
+    margin: 20px 0;
+}
+
+/* Pop animation */
+@keyframes pop {
+    0% { transform: scale(0); opacity: 0; }
+    60% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+
+img {
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(51, 54, 255, 0.5);
+    margin: 30px 0;
+    transition: transform 0.3s ease;
+}
+img:hover {
+    transform: scale(1.05) rotate(-2deg);
+}
+
+
+footer {
+    margin-top: 50px;
+    padding: 20px 0;
+    background-color: #b3b8ffff;
+    color: #270066ff;
+    font-size: 1.2em;
+}
+
+/* Optional: floating hearts (JS will add them) */
+.heart {
+    position: absolute;
+    font-size: 24px;
+    animation: floatUp 4s linear forwards;
+}
+@keyframes floatUp {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-500px) scale(1.5); opacity: 0; }
+}
